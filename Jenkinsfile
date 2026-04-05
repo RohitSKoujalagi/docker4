@@ -9,13 +9,13 @@ pipeline{
         stage("Greet")
         {
             steps{
-                sh "echo $HOME"
+                sh "echo Hello"
                 echo "Running in docker agent"
             }
         }
         stage("Clone") {
             steps {
-                git url: "${repo}", 
+                git url: "https://github.com/RohitSKoujalagi/docker4.git", 
                     branch: 'main', 
                     credentialsId: 'jenkins-ghid' // Use the ID you created
                 sh "ls"
