@@ -9,7 +9,7 @@ pipeline{
         stage("Greet")
         {
             steps{
-                sh "echo Hello"
+                sh "echo Hi Duniya"
                 echo "Running in docker agent"
             }
         }
